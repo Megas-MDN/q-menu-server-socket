@@ -40,7 +40,7 @@ io.on('connection', (socket) => {
 
   socket.on('ready-to-get', (data) => {
     // enviar a status pronto para pegar
-    io.in(restaurant).emit('go-get', data);
+    io.in(restaurant).emit('go-get', data); // data = {table: hash}
   });
 
   socket.on('disconnect', (reason) => {
